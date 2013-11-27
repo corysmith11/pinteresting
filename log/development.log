@@ -1,0 +1,666 @@
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-26 20:06:01 -0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendered c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/railties-4.0.0/lib/rails/templates/rails/welcome/index.html.erb (13.0ms)
+Completed 200 OK in 153ms (Views: 116.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2013-11-26 20:13:22 -0700
+
+ActionController::RoutingError (No route matches [GET] "/home"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  c:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  c:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  c:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.0ms)
+  Rendered c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (64.0ms)
+  Rendered c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (129.0ms)
+
+
+Started GET "/pages/home" for 127.0.0.1 at 2013-11-26 20:13:57 -0700
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 2602ms (Views: 2576.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-26 20:13:59 -0700
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-11-26 20:13:59 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-26 20:13:59 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-26 20:13:59 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-26 20:13:59 -0700
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-11-26 20:13:59 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-26 20:13:59 -0700
+
+
+Started GET "/pages/home" for 127.0.0.1 at 2013-11-26 20:17:22 -0700
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-11-26 20:17:22 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-26 20:17:22 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-26 20:17:22 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-26 20:17:22 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-26 20:17:22 -0700
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-11-26 20:17:22 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-26 20:17:22 -0700
+
+
+Started GET "/pages/home" for 127.0.0.1 at 2013-11-26 20:17:39 -0700
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 7ms (Views: 7.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-26 20:17:39 -0700
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-11-26 20:17:39 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-26 20:17:39 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-26 20:17:39 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-26 20:17:39 -0700
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-11-26 20:17:40 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-26 20:17:40 -0700
+
+
+Started GET "/pages/home" for 127.0.0.1 at 2013-11-26 20:17:57 -0700
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 8ms (Views: 6.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-26 20:17:57 -0700
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-11-26 20:17:57 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-26 20:17:57 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-26 20:17:57 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-26 20:17:57 -0700
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-11-26 20:17:57 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-26 20:17:57 -0700
+
+
+Started GET "/pages/home" for 127.0.0.1 at 2013-11-26 20:19:23 -0700
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 8ms (Views: 6.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-26 20:19:24 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-26 20:19:24 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-26 20:19:24 -0700
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-11-26 20:19:24 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-26 20:19:24 -0700
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-11-26 20:19:24 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-26 20:19:24 -0700
+
+
+Started GET "/pages/home" for 127.0.0.1 at 2013-11-26 20:20:32 -0700
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-26 20:20:32 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-26 20:20:32 -0700
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-11-26 20:20:32 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-26 20:20:32 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-26 20:20:32 -0700
+
+
+Started GET "/pages/www.google.com" for 127.0.0.1 at 2013-11-26 20:20:33 -0700
+
+ActionController::RoutingError (No route matches [GET] "/pages/www.google.com"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  c:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  c:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  c:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (13.0ms)
+  Rendered c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.0ms)
+  Rendered c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (44.0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-11-26 20:20:33 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-26 20:20:33 -0700
+
+
+Started GET "/pages/home" for 127.0.0.1 at 2013-11-26 20:20:36 -0700
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-26 20:20:36 -0700
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-11-26 20:20:36 -0700
+
+
+Started GET "/pages/www.google.com" for 127.0.0.1 at 2013-11-26 20:20:36 -0700
+
+ActionController::RoutingError (No route matches [GET] "/pages/www.google.com"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  c:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  c:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  c:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.0ms)
+  Rendered c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (32.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-26 20:20:36 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-26 20:20:36 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-26 20:20:36 -0700
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-11-26 20:20:37 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-26 20:20:37 -0700
+
+
+Started GET "/pages/home" for 127.0.0.1 at 2013-11-26 20:21:00 -0700
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 7ms (Views: 7.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-26 20:21:00 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-26 20:21:00 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-26 20:21:00 -0700
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-11-26 20:21:00 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-26 20:21:00 -0700
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-11-26 20:21:00 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-26 20:21:01 -0700
+
+
+Started GET "/pages/home" for 127.0.0.1 at 2013-11-26 21:06:47 -0700
+
+ActionController::RoutingError (No route matches [GET] "/pages/home"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  c:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  c:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  c:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.0ms)
+  Rendered c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (32.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-26 21:06:55 -0700
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 8ms (Views: 6.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-11-26 21:06:55 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-26 21:06:55 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-26 21:06:55 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-26 21:06:55 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-26 21:06:55 -0700
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-11-26 21:06:55 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-26 21:06:55 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-26 21:07:02 -0700
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-11-26 21:07:02 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-26 21:07:02 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-26 21:07:02 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-26 21:07:02 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-26 21:07:02 -0700
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-11-26 21:07:02 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-26 21:07:02 -0700
+
+
+Started GET "/about" for 127.0.0.1 at 2013-11-26 21:21:37 -0700
+Processing by PagesController#about as HTML
+  Rendered pages/about.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-26 21:21:37 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-26 21:21:37 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-26 21:21:37 -0700
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-11-26 21:21:37 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-26 21:21:37 -0700
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-11-26 21:21:37 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-26 21:21:38 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-26 23:05:43 -0700
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 8ms (Views: 8.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-26 23:05:43 -0700
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-11-26 23:05:43 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-26 23:05:43 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-26 23:05:43 -0700
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-11-26 23:05:43 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-26 23:05:43 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-26 23:05:44 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-26 23:10:58 -0700
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-26 23:10:58 -0700
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-11-26 23:10:58 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-26 23:10:58 -0700
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-11-26 23:10:58 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-26 23:10:58 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-26 23:10:58 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-26 23:10:58 -0700
+
+
+Started GET "/about" for 127.0.0.1 at 2013-11-26 23:11:03 -0700
+Processing by PagesController#about as HTML
+  Rendered pages/about.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-26 23:11:21 -0700
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-26 23:11:21 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-26 23:11:21 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-26 23:11:21 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-26 23:11:21 -0700
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-11-26 23:11:21 -0700
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-11-26 23:11:22 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-26 23:11:22 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-26 23:11:35 -0700
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 9ms (Views: 9.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-11-26 23:11:35 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-26 23:11:35 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-26 23:11:35 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-26 23:11:35 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-26 23:11:35 -0700
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-11-26 23:11:35 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-26 23:11:35 -0700
+
+
+Started GET "/about" for 127.0.0.1 at 2013-11-26 23:11:36 -0700
+Processing by PagesController#about as HTML
+  Rendered pages/about.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-26 23:17:34 -0700
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 8ms (Views: 8.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-26 23:17:34 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-26 23:17:34 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-26 23:17:34 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-26 23:17:34 -0700
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-11-26 23:17:34 -0700
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-11-26 23:17:34 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-26 23:17:34 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-26 23:17:36 -0700
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2013-11-26 23:17:37 -0700
+Processing by PagesController#about as HTML
+  Rendered pages/about.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-26 23:17:41 -0700
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-26 23:18:11 -0700
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-26 23:18:11 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-26 23:18:11 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-26 23:18:11 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-26 23:18:11 -0700
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-11-26 23:18:11 -0700
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-11-26 23:18:11 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-26 23:18:12 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-26 23:19:45 -0700
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-11-26 23:19:45 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-26 23:19:45 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-26 23:19:45 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-26 23:19:45 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-26 23:19:45 -0700
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-11-26 23:19:45 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-26 23:19:45 -0700
+
+
+Started GET "/about" for 127.0.0.1 at 2013-11-26 23:19:48 -0700
+Processing by PagesController#about as HTML
+  Rendered pages/about.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-26 23:19:49 -0700
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 7ms (Views: 7.0ms | ActiveRecord: 0.0ms)
