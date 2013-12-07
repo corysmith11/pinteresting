@@ -11268,3 +11268,81 @@ Started GET "/assets/bootstrap_and_customization.css?body=1" for 127.0.0.1 at 20
 
 
 Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2013-12-05 23:29:45 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-07 13:30:46 -0700
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (17.0ms)
+  Rendered layouts/_header.html.erb (12.0ms)
+Completed 200 OK in 473ms (Views: 446.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-07 13:30:47 -0700
+
+
+Started GET "/assets/bootstrap_and_customization.css?body=1" for 127.0.0.1 at 2013-12-07 13:30:47 -0700
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-12-07 13:30:47 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-07 13:30:47 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-07 13:30:47 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2013-12-07 13:30:47 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2013-12-07 13:30:47 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2013-12-07 13:30:47 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2013-12-07 13:30:47 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2013-12-07 13:30:47 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2013-12-07 13:30:47 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2013-12-07 13:30:47 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2013-12-07 13:30:47 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2013-12-07 13:30:47 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2013-12-07 13:30:48 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2013-12-07 13:30:48 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2013-12-07 13:30:48 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-07 13:30:48 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-07 13:30:48 -0700
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-12-07 13:30:48 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-07 13:30:48 -0700
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2013-12-07 13:30:51 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendered c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/devise-3.1.1/app/views/devise/shared/_links.erb (12.0ms)
+  Rendered c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/devise-3.1.1/app/views/devise/sessions/new.html.erb within layouts/application (190.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 314ms (Views: 234.0ms | ActiveRecord: 8.0ms)
