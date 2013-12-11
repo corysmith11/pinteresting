@@ -13,6 +13,11 @@
 		<div class="container">
 			<% flash.each do |name, msg| %>
      <%= content_tag(:div, msg, class: "alert alert-info") %>
+     <style>
+    body {
+        padding-top: 60px;
+    }
+  </style>
 <% end %>
 			<%= yield %>
 	</div>
