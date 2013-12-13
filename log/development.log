@@ -19229,3 +19229,2026 @@ Processing by PinsController#new as HTML
   Rendered pins/new.html.erb within layouts/application (4.0ms)
   Rendered layouts/_header.html.erb (1.0ms)
 Completed 200 OK in 26ms (Views: 26.0ms | ActiveRecord: 0.0ms)
+  [1m[36mPin Load (0.0ms)[0m  [1mSELECT "pins".* FROM "pins" ORDER BY "pins"."id" ASC LIMIT 1[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.0ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[36mPin Load (0.0ms)[0m  [1mSELECT "pins".* FROM "pins" ORDER BY "pins"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddUserIdToPins (20131212070601)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (41.0ms)[0m  [1mALTER TABLE "pins" ADD "user_id" integer[0m
+  [1m[35m (1.0ms)[0m  CREATE INDEX "index_pins_on_user_id" ON "pins" ("user_id")
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20131212070601"]]
+  [1m[35m (8.0ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-12 18:03:18 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (25.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 993ms (Views: 945.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-12 18:03:19 -0700
+
+
+Started GET "/assets/bootstrap_and_customization.css?body=1" for 127.0.0.1 at 2013-12-12 18:03:20 -0700
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-12-12 18:03:20 -0700
+
+
+Started GET "/assets/pins.css?body=1" for 127.0.0.1 at 2013-12-12 18:03:20 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-12 18:03:20 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-12 18:03:20 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2013-12-12 18:03:20 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2013-12-12 18:03:20 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2013-12-12 18:03:20 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2013-12-12 18:03:20 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2013-12-12 18:03:20 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2013-12-12 18:03:20 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2013-12-12 18:03:20 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2013-12-12 18:03:20 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2013-12-12 18:03:20 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2013-12-12 18:03:20 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2013-12-12 18:03:20 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2013-12-12 18:03:20 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-12 18:03:20 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-12 18:03:21 -0700
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-12-12 18:03:21 -0700
+
+
+Started GET "/assets/pins.js?body=1" for 127.0.0.1 at 2013-12-12 18:03:21 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-12 18:03:21 -0700
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2013-12-12 18:04:28 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (17.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (247.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 335ms (Views: 295.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2013-12-12 18:04:39 -0700
+Processing by PinsController#index as HTML
+  [1m[35mPin Load (0.0ms)[0m  SELECT "pins".* FROM "pins"
+  Rendered pins/index.html.erb within layouts/application (13.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 162ms (Views: 90.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-12 18:04:39 -0700
+
+
+Started GET "/assets/bootstrap_and_customization.css?body=1" for 127.0.0.1 at 2013-12-12 18:04:39 -0700
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-12-12 18:04:39 -0700
+
+
+Started GET "/assets/pins.css?body=1" for 127.0.0.1 at 2013-12-12 18:04:39 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-12 18:04:39 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-12 18:04:39 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2013-12-12 18:04:40 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2013-12-12 18:04:40 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2013-12-12 18:04:40 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2013-12-12 18:04:40 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2013-12-12 18:04:40 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2013-12-12 18:04:40 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2013-12-12 18:04:40 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2013-12-12 18:04:40 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2013-12-12 18:04:40 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2013-12-12 18:04:40 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2013-12-12 18:04:40 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2013-12-12 18:04:40 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-12 18:04:40 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-12 18:04:40 -0700
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-12-12 18:04:40 -0700
+
+
+Started GET "/assets/pins.js?body=1" for 127.0.0.1 at 2013-12-12 18:04:40 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-12 18:04:40 -0700
+  [1m[36mPin Load (1.0ms)[0m  [1mSELECT "pins".* FROM "pins" ORDER BY "pins"."id" ASC LIMIT 1[0m
+  [1m[36mPin Load (0.0ms)[0m  [1mSELECT "pins".* FROM "pins" ORDER BY "pins"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (57.0ms)[0m  UPDATE "pins" SET "user_id" = ?, "updated_at" = ? WHERE "pins"."id" = 1  [["user_id", 1], ["updated_at", Fri, 13 Dec 2013 01:19:43 UTC +00:00]]
+  [1m[36m (5.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPin Load (1.0ms)[0m  SELECT "pins".* FROM "pins" WHERE "pins"."user_id" = ?  [["user_id", 1]]
+
+
+Started GET "/pins/new" for 127.0.0.1 at 2013-12-12 18:25:10 -0700
+Processing by PinsController#new as HTML
+  Rendered pins/_form.html.erb (3.0ms)
+  Rendered pins/new.html.erb within layouts/application (10.0ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+Completed 200 OK in 41ms (Views: 41.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/pins" for 127.0.0.1 at 2013-12-12 18:25:32 -0700
+Processing by PinsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"g8ArkscRjEufl08D3ByUrHub9ThXqjsgdKABWuNxIzM=", "pin"=>{"description"=>"We crazy"}, "commit"=>"Create Pin"}
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (10.0ms)[0m  INSERT INTO "pins" ("created_at", "description", "updated_at") VALUES (?, ?, ?)  [["created_at", Fri, 13 Dec 2013 01:25:32 UTC +00:00], ["description", "We crazy"], ["updated_at", Fri, 13 Dec 2013 01:25:32 UTC +00:00]]
+  [1m[36m (5.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/pins/3
+Completed 302 Found in 19ms (ActiveRecord: 15.0ms)
+
+
+Started GET "/pins/3" for 127.0.0.1 at 2013-12-12 18:25:32 -0700
+Processing by PinsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mPin Load (1.0ms)[0m  SELECT "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT 1  [["id", "3"]]
+  Rendered pins/show.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 44ms (Views: 42.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-12 18:25:32 -0700
+
+
+Started GET "/assets/bootstrap_and_customization.css?body=1" for 127.0.0.1 at 2013-12-12 18:25:33 -0700
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-12-12 18:25:33 -0700
+
+
+Started GET "/assets/pins.css?body=1" for 127.0.0.1 at 2013-12-12 18:25:33 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-12 18:25:33 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-12 18:25:33 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2013-12-12 18:25:33 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2013-12-12 18:25:33 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2013-12-12 18:25:33 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2013-12-12 18:25:33 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2013-12-12 18:25:33 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2013-12-12 18:25:33 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2013-12-12 18:25:33 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2013-12-12 18:25:33 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2013-12-12 18:25:33 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2013-12-12 18:25:33 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2013-12-12 18:25:33 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2013-12-12 18:25:33 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-12 18:25:33 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-12 18:25:34 -0700
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-12-12 18:25:34 -0700
+
+
+Started GET "/assets/pins.js?body=1" for 127.0.0.1 at 2013-12-12 18:25:34 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-12 18:25:34 -0700
+
+
+Started GET "/pins" for 127.0.0.1 at 2013-12-12 18:25:36 -0700
+Processing by PinsController#index as HTML
+  [1m[36mPin Load (0.0ms)[0m  [1mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 27ms (Views: 27.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2013-12-12 18:29:57 -0700
+Processing by PinsController#index as HTML
+  [1m[35mPin Load (0.0ms)[0m  SELECT "pins".* FROM "pins"
+  Rendered pins/index.html.erb within layouts/application (29.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 56ms (Views: 52.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-12 18:29:57 -0700
+
+
+Started GET "/assets/bootstrap_and_customization.css?body=1" for 127.0.0.1 at 2013-12-12 18:29:57 -0700
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-12-12 18:29:57 -0700
+
+
+Started GET "/assets/pins.css?body=1" for 127.0.0.1 at 2013-12-12 18:29:57 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-12 18:29:58 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-12 18:29:58 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2013-12-12 18:29:58 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2013-12-12 18:29:58 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2013-12-12 18:29:58 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2013-12-12 18:29:58 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2013-12-12 18:29:58 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2013-12-12 18:29:58 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2013-12-12 18:29:58 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2013-12-12 18:29:58 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2013-12-12 18:29:58 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2013-12-12 18:29:58 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2013-12-12 18:29:58 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2013-12-12 18:29:58 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-12 18:29:58 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-12 18:29:58 -0700
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-12-12 18:29:58 -0700
+
+
+Started GET "/assets/pins.js?body=1" for 127.0.0.1 at 2013-12-12 18:29:58 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-12 18:29:59 -0700
+
+
+Started GET "/pins/new" for 127.0.0.1 at 2013-12-12 18:30:02 -0700
+Processing by PinsController#new as HTML
+Completed 500 Internal Server Error in 2ms
+
+NoMethodError (undefined method `pins' for nil:NilClass):
+  app/controllers/pins_controller.rb:12:in `new'
+
+
+  Rendered c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (46.0ms)
+
+
+Started GET "/pins/new" for 127.0.0.1 at 2013-12-12 18:30:03 -0700
+Processing by PinsController#new as HTML
+Completed 500 Internal Server Error in 2ms
+
+NoMethodError (undefined method `pins' for nil:NilClass):
+  app/controllers/pins_controller.rb:12:in `new'
+
+
+  Rendered c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (29.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2013-12-12 18:32:53 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (0.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (5.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 79ms (Views: 42.0ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2013-12-12 18:32:54 -0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"g8ArkscRjEufl08D3ByUrHub9ThXqjsgdKABWuNxIzM=", "user"=>{"email"=>"csmith@rycoleinvest.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'csmith@rycoleinvest.com' LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = 1[0m  [["last_sign_in_at", Wed, 11 Dec 2013 06:17:02 UTC +00:00], ["current_sign_in_at", Fri, 13 Dec 2013 01:32:54 UTC +00:00], ["sign_in_count", 13], ["updated_at", Fri, 13 Dec 2013 01:32:54 UTC +00:00]]
+  [1m[35m (5.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 157ms (ActiveRecord: 8.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-12 18:32:54 -0700
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered pages/home.html.erb within layouts/application (20.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 45ms (Views: 44.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-12 18:32:55 -0700
+
+
+Started GET "/assets/pins.css?body=1" for 127.0.0.1 at 2013-12-12 18:32:55 -0700
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-12-12 18:32:55 -0700
+
+
+Started GET "/assets/bootstrap_and_customization.css?body=1" for 127.0.0.1 at 2013-12-12 18:32:55 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-12 18:32:55 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-12 18:32:55 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2013-12-12 18:32:55 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2013-12-12 18:32:55 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2013-12-12 18:32:55 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2013-12-12 18:32:55 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2013-12-12 18:32:55 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2013-12-12 18:32:55 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2013-12-12 18:32:55 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2013-12-12 18:32:55 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2013-12-12 18:32:55 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2013-12-12 18:32:55 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2013-12-12 18:32:55 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2013-12-12 18:32:56 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-12 18:32:56 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-12 18:32:56 -0700
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-12-12 18:32:56 -0700
+
+
+Started GET "/assets/pins.js?body=1" for 127.0.0.1 at 2013-12-12 18:32:56 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-12 18:32:56 -0700
+
+
+Started GET "/pins" for 127.0.0.1 at 2013-12-12 18:33:00 -0700
+Processing by PinsController#index as HTML
+  [1m[35mPin Load (1.0ms)[0m  SELECT "pins".* FROM "pins"
+  Rendered pins/index.html.erb within layouts/application (2.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered layouts/_header.html.erb (2.0ms)
+Completed 200 OK in 27ms (Views: 25.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-12 18:33:00 -0700
+
+
+Started GET "/assets/bootstrap_and_customization.css?body=1" for 127.0.0.1 at 2013-12-12 18:33:01 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-12 18:33:01 -0700
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-12-12 18:33:01 -0700
+
+
+Started GET "/assets/pins.css?body=1" for 127.0.0.1 at 2013-12-12 18:33:01 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-12 18:33:01 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2013-12-12 18:33:01 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2013-12-12 18:33:01 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2013-12-12 18:33:01 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2013-12-12 18:33:01 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2013-12-12 18:33:01 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2013-12-12 18:33:01 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2013-12-12 18:33:01 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2013-12-12 18:33:01 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2013-12-12 18:33:01 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2013-12-12 18:33:01 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2013-12-12 18:33:01 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2013-12-12 18:33:01 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-12 18:33:02 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-12 18:33:02 -0700
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-12-12 18:33:02 -0700
+
+
+Started GET "/assets/pins.js?body=1" for 127.0.0.1 at 2013-12-12 18:33:02 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-12 18:33:02 -0700
+
+
+Started GET "/pins/new" for 127.0.0.1 at 2013-12-12 18:33:21 -0700
+Processing by PinsController#new as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered pins/_form.html.erb (2.0ms)
+  Rendered pins/new.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 51ms (Views: 26.0ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/pins" for 127.0.0.1 at 2013-12-12 18:33:33 -0700
+Processing by PinsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"87mDtTj9ITWj2jNk3RcgyPaHo4L7XKjZyq9G2ZxfKag=", "pin"=>{"description"=>"this should be associated with a user"}, "commit"=>"Create Pin"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "pins" ("created_at", "description", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["created_at", Fri, 13 Dec 2013 01:33:33 UTC +00:00], ["description", "this should be associated with a user"], ["updated_at", Fri, 13 Dec 2013 01:33:33 UTC +00:00], ["user_id", 1]]
+  [1m[35m (5.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/pins/4
+Completed 302 Found in 14ms (ActiveRecord: 6.0ms)
+
+
+Started GET "/pins/4" for 127.0.0.1 at 2013-12-12 18:33:33 -0700
+Processing by PinsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPin Load (0.0ms)[0m  [1mSELECT "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT 1[0m  [["id", "4"]]
+  Rendered pins/show.html.erb within layouts/application (0.0ms)
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 25ms (Views: 22.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-12 18:33:33 -0700
+
+
+Started GET "/assets/bootstrap_and_customization.css?body=1" for 127.0.0.1 at 2013-12-12 18:33:33 -0700
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-12-12 18:33:33 -0700
+
+
+Started GET "/assets/pins.css?body=1" for 127.0.0.1 at 2013-12-12 18:33:33 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-12 18:33:33 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-12 18:33:33 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2013-12-12 18:33:34 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2013-12-12 18:33:34 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2013-12-12 18:33:34 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2013-12-12 18:33:34 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2013-12-12 18:33:34 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2013-12-12 18:33:34 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2013-12-12 18:33:34 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2013-12-12 18:33:34 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2013-12-12 18:33:34 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2013-12-12 18:33:34 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2013-12-12 18:33:34 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2013-12-12 18:33:34 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-12 18:33:34 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-12 18:33:34 -0700
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-12-12 18:33:34 -0700
+
+
+Started GET "/assets/pins.js?body=1" for 127.0.0.1 at 2013-12-12 18:33:34 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-12 18:33:34 -0700
+
+
+Started GET "/pins" for 127.0.0.1 at 2013-12-12 18:33:37 -0700
+Processing by PinsController#index as HTML
+  [1m[36mPin Load (0.0ms)[0m  [1mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (2.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered layouts/_header.html.erb (2.0ms)
+Completed 200 OK in 26ms (Views: 25.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2013-12-12 18:38:10 -0700
+Processing by PinsController#index as HTML
+  [1m[36mPin Load (1.0ms)[0m  [1mSELECT "pins".* FROM "pins"[0m
+  Rendered pins/index.html.erb within layouts/application (4.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered layouts/_header.html.erb (2.0ms)
+Completed 200 OK in 27ms (Views: 26.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-12 18:38:10 -0700
+
+
+Started GET "/assets/pins.css?body=1" for 127.0.0.1 at 2013-12-12 18:38:10 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-12 18:38:10 -0700
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-12-12 18:38:10 -0700
+
+
+Started GET "/assets/bootstrap_and_customization.css?body=1" for 127.0.0.1 at 2013-12-12 18:38:10 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-12 18:38:10 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2013-12-12 18:38:10 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2013-12-12 18:38:10 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2013-12-12 18:38:10 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2013-12-12 18:38:10 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2013-12-12 18:38:11 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2013-12-12 18:38:11 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2013-12-12 18:38:11 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2013-12-12 18:38:11 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2013-12-12 18:38:11 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2013-12-12 18:38:11 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2013-12-12 18:38:11 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2013-12-12 18:38:11 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-12 18:38:11 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-12 18:38:11 -0700
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-12-12 18:38:11 -0700
+
+
+Started GET "/assets/pins.js?body=1" for 127.0.0.1 at 2013-12-12 18:38:11 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-12 18:38:11 -0700
+
+
+Started GET "/pins" for 127.0.0.1 at 2013-12-12 18:43:27 -0700
+Processing by PinsController#index as HTML
+  [1m[36mPin Load (0.0ms)[0m  [1mSELECT "pins".* FROM "pins"[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered pins/index.html.erb within layouts/application (27.0ms)
+Completed 500 Internal Server Error in 33ms
+
+ActionView::Template::Error (undefined method `email' for nil:NilClass):
+    15:     <% @pins.each do |pin| %>
+    16:       <tr>
+    17:         <td><%= pin.description %></td>
+    18:         <td><%= pin.user.email %></td>
+    19:         <td><%= link_to 'Show', pin %></td>
+    20:         <td><%= link_to 'Edit', edit_pin_path(pin) %></td>
+    21:         <td><%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  app/views/pins/index.html.erb:18:in `block in _app_views_pins_index_html_erb__321284323_31845852'
+  app/views/pins/index.html.erb:15:in `_app_views_pins_index_html_erb__321284323_31845852'
+
+
+  Rendered c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (21.0ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2013-12-12 18:45:36 -0700
+Processing by PinsController#index as HTML
+  [1m[36mPin Load (0.0ms)[0m  [1mSELECT "pins".* FROM "pins"[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered pins/index.html.erb within layouts/application (5.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 47ms (Views: 46.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-12 18:45:36 -0700
+
+
+Started GET "/assets/bootstrap_and_customization.css?body=1" for 127.0.0.1 at 2013-12-12 18:45:36 -0700
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-12-12 18:45:36 -0700
+
+
+Started GET "/assets/pins.css?body=1" for 127.0.0.1 at 2013-12-12 18:45:36 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-12 18:45:36 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-12 18:45:36 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2013-12-12 18:45:36 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2013-12-12 18:45:36 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2013-12-12 18:45:36 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2013-12-12 18:45:36 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2013-12-12 18:45:36 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2013-12-12 18:45:37 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2013-12-12 18:45:37 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2013-12-12 18:45:37 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2013-12-12 18:45:37 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2013-12-12 18:45:37 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2013-12-12 18:45:37 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2013-12-12 18:45:37 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-12 18:45:37 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-12 18:45:37 -0700
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-12-12 18:45:37 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-12 18:45:37 -0700
+
+
+Started GET "/assets/pins.js?body=1" for 127.0.0.1 at 2013-12-12 18:45:37 -0700
+
+
+Started GET "/pins" for 127.0.0.1 at 2013-12-12 18:50:48 -0700
+Processing by PinsController#index as HTML
+  [1m[36mPin Load (0.0ms)[0m  [1mSELECT "pins".* FROM "pins"[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered pins/index.html.erb within layouts/application (39.0ms)
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 66ms (Views: 60.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-12 18:50:48 -0700
+
+
+Started GET "/assets/bootstrap_and_customization.css?body=1" for 127.0.0.1 at 2013-12-12 18:50:48 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-12 18:50:49 -0700
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-12-12 18:50:49 -0700
+
+
+Started GET "/assets/pins.css?body=1" for 127.0.0.1 at 2013-12-12 18:50:49 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-12 18:50:49 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2013-12-12 18:50:49 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2013-12-12 18:50:49 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2013-12-12 18:50:49 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2013-12-12 18:50:49 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2013-12-12 18:50:49 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2013-12-12 18:50:49 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2013-12-12 18:50:49 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2013-12-12 18:50:49 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2013-12-12 18:50:49 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2013-12-12 18:50:49 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2013-12-12 18:50:49 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2013-12-12 18:50:49 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-12 18:50:49 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-12 18:50:50 -0700
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-12-12 18:50:50 -0700
+
+
+Started GET "/assets/pins.js?body=1" for 127.0.0.1 at 2013-12-12 18:50:50 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-12 18:50:50 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-12 18:51:28 -0700
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 25ms (Views: 24.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-12 18:51:28 -0700
+
+
+Started GET "/assets/bootstrap_and_customization.css?body=1" for 127.0.0.1 at 2013-12-12 18:51:28 -0700
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-12-12 18:51:28 -0700
+
+
+Started GET "/assets/pins.css?body=1" for 127.0.0.1 at 2013-12-12 18:51:28 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-12 18:51:28 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-12 18:51:28 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2013-12-12 18:51:28 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2013-12-12 18:51:28 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2013-12-12 18:51:28 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2013-12-12 18:51:28 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2013-12-12 18:51:28 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2013-12-12 18:51:28 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2013-12-12 18:51:28 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2013-12-12 18:51:28 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2013-12-12 18:51:28 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2013-12-12 18:51:28 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2013-12-12 18:51:28 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2013-12-12 18:51:28 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-12 18:51:28 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-12 18:51:28 -0700
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-12-12 18:51:28 -0700
+
+
+Started GET "/assets/pins.js?body=1" for 127.0.0.1 at 2013-12-12 18:51:28 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-12 18:51:28 -0700
+
+
+Started GET "/pins" for 127.0.0.1 at 2013-12-12 18:51:34 -0700
+Processing by PinsController#index as HTML
+  [1m[36mPin Load (0.0ms)[0m  [1mSELECT "pins".* FROM "pins"[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered pins/index.html.erb within layouts/application (52.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 78ms (Views: 73.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/pins/new" for 127.0.0.1 at 2013-12-12 18:52:07 -0700
+Processing by PinsController#new as HTML
+Completed 500 Internal Server Error in 1ms
+
+NoMethodError (undefined method `pins' for nil:NilClass):
+  app/controllers/pins_controller.rb:13:in `new'
+
+
+  Rendered c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (30.0ms)
+
+
+Started GET "/pins/new" for 127.0.0.1 at 2013-12-12 18:52:07 -0700
+Processing by PinsController#new as HTML
+Completed 500 Internal Server Error in 1ms
+
+NoMethodError (undefined method `pins' for nil:NilClass):
+  app/controllers/pins_controller.rb:13:in `new'
+
+
+  Rendered c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (31.0ms)
+
+
+Started GET "/pins/new" for 127.0.0.1 at 2013-12-12 18:53:44 -0700
+Processing by PinsController#new as HTML
+Completed 401 Unauthorized in 7ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2013-12-12 18:53:44 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (0.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (5.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 65ms (Views: 41.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2013-12-12 19:00:18 -0700
+Processing by PinsController#index as HTML
+ERROR: compiling _app_views_pins_index_html_erb__321284323_32982888 RAISED c:/Users/cory smith/desktop/pinteresting/app/views/pins/index.html.erb:32: syntax error, unexpected keyword_ensure, expecting keyword_end
+c:/Users/cory smith/desktop/pinteresting/app/views/pins/index.html.erb:34: syntax error, unexpected $end, expecting keyword_end
+Function body:           def _app_views_pins_index_html_erb__321284323_32982888(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "pins/index";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.safe_append='<h1>Listing pins</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Description</th>
+      <th>User</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+';     @pins.each do |pin| 
+@output_buffer.safe_append='      <tr>
+        <td>';@output_buffer.append=( pin.description );@output_buffer.safe_append='</td>
+        <td>';@output_buffer.append=( pin.user.email if pin.user );@output_buffer.safe_append='</td>
+        <td>';@output_buffer.append=( link_to 'Show', pin );@output_buffer.safe_append='</td>
+';         if pin.user == current_user 
+@output_buffer.safe_append='        <td>';@output_buffer.append=( link_to 'Edit', edit_pin_path(pin) );@output_buffer.safe_append='</td>
+        <td>';@output_buffer.append=( link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' } );@output_buffer.safe_append='</td>
+      </tr>
+';     end 
+@output_buffer.safe_append='  </tbody>
+</table>
+
+<br>
+
+';@output_buffer.append=( link_to 'New Pin', new_pin_path );@output_buffer.safe_append='
+';@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_view/template.rb:299:in `module_eval'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_view/template.rb:299:in `compile'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_view/template.rb:248:in `block in compile!'
+<internal:prelude>:10:in `synchronize'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_view/template.rb:236:in `compile!'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_view/template.rb:142:in `block in render'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-4.0.0/lib/active_support/notifications.rb:161:in `instrument'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_view/template.rb:141:in `render'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_view/renderer/template_renderer.rb:49:in `block (2 levels) in render_template'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-4.0.0/lib/active_support/notifications.rb:159:in `block in instrument'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-4.0.0/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-4.0.0/lib/active_support/notifications.rb:159:in `instrument'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_view/renderer/template_renderer.rb:48:in `block in render_template'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_view/renderer/template_renderer.rb:56:in `render_with_layout'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_view/renderer/template_renderer.rb:47:in `render_template'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_view/renderer/template_renderer.rb:17:in `render'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_view/renderer/renderer.rb:42:in `render_template'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_view/renderer/renderer.rb:23:in `render'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/abstract_controller/rendering.rb:127:in `_render_template'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_controller/metal/streaming.rb:219:in `_render_template'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/abstract_controller/rendering.rb:120:in `render_to_body'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/abstract_controller/rendering.rb:97:in `render'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_controller/metal/rendering.rb:16:in `render'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-4.0.0/lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-4.0.0/lib/active_support/core_ext/benchmark.rb:12:in `ms'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activerecord-4.0.0/lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_controller/metal/instrumentation.rb:40:in `render'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/abstract_controller/base.rb:189:in `process_action'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_controller/metal/rendering.rb:10:in `process_action'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-4.0.0/lib/active_support/callbacks.rb:423:in `_run__751188375__process_action__callbacks'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-4.0.0/lib/active_support/callbacks.rb:80:in `run_callbacks'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/abstract_controller/callbacks.rb:17:in `process_action'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_controller/metal/rescue.rb:29:in `process_action'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-4.0.0/lib/active_support/notifications.rb:159:in `block in instrument'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-4.0.0/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-4.0.0/lib/active_support/notifications.rb:159:in `instrument'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activerecord-4.0.0/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/abstract_controller/base.rb:136:in `process'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/abstract_controller/rendering.rb:44:in `process'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_controller/metal.rb:195:in `dispatch'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_controller/metal.rb:231:in `block in action'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/routing/route_set.rb:80:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/routing/route_set.rb:48:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/journey/router.rb:71:in `block in call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/journey/router.rb:59:in `each'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/journey/router.rb:59:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/routing/route_set.rb:655:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/warden-1.2.3/lib/warden/manager.rb:35:in `block in call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/warden-1.2.3/lib/warden/manager.rb:34:in `catch'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/warden-1.2.3/lib/warden/manager.rb:34:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.5.2/lib/rack/etag.rb:23:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.5.2/lib/rack/conditionalget.rb:25:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.5.2/lib/rack/head.rb:11:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/flash.rb:241:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:225:in `context'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:220:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/cookies.rb:486:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activerecord-4.0.0/lib/active_record/query_cache.rb:36:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activerecord-4.0.0/lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activerecord-4.0.0/lib/active_record/migration.rb:369:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-4.0.0/lib/active_support/callbacks.rb:373:in `_run__247389698__call__callbacks'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-4.0.0/lib/active_support/callbacks.rb:80:in `run_callbacks'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/reloader.rb:64:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/railties-4.0.0/lib/rails/rack/logger.rb:38:in `call_app'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/railties-4.0.0/lib/rails/rack/logger.rb:21:in `block in call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-4.0.0/lib/active_support/tagged_logging.rb:67:in `block in tagged'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-4.0.0/lib/active_support/tagged_logging.rb:25:in `tagged'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-4.0.0/lib/active_support/tagged_logging.rb:67:in `tagged'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/railties-4.0.0/lib/rails/rack/logger.rb:21:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.5.2/lib/rack/methodoverride.rb:21:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.5.2/lib/rack/runtime.rb:17:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-4.0.0/lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/static.rb:64:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/railties-4.0.0/lib/rails/engine.rb:511:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/railties-4.0.0/lib/rails/application.rb:97:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.5.2/lib/rack/content_length.rb:14:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.5.2/lib/rack/handler/webrick.rb:60:in `service'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+  Rendered pins/index.html.erb within layouts/application (3.0ms)
+Completed 500 Internal Server Error in 12ms
+
+ActionView::Template::Error (c:/Users/cory smith/desktop/pinteresting/app/views/pins/index.html.erb:32: syntax error, unexpected keyword_ensure, expecting keyword_end
+c:/Users/cory smith/desktop/pinteresting/app/views/pins/index.html.erb:34: syntax error, unexpected $end, expecting keyword_end):
+    29: 
+    30: <%= link_to 'New Pin', new_pin_path %>
+  actionpack (4.0.0) lib/action_view/template.rb:299:in `module_eval'
+  actionpack (4.0.0) lib/action_view/template.rb:299:in `compile'
+  actionpack (4.0.0) lib/action_view/template.rb:248:in `block in compile!'
+  <internal:prelude>:10:in `synchronize'
+  actionpack (4.0.0) lib/action_view/template.rb:236:in `compile!'
+  actionpack (4.0.0) lib/action_view/template.rb:142:in `block in render'
+  activesupport (4.0.0) lib/active_support/notifications.rb:161:in `instrument'
+  actionpack (4.0.0) lib/action_view/template.rb:141:in `render'
+  actionpack (4.0.0) lib/action_view/renderer/template_renderer.rb:49:in `block (2 levels) in render_template'
+  actionpack (4.0.0) lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  activesupport (4.0.0) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.0) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.0) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.0) lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  actionpack (4.0.0) lib/action_view/renderer/template_renderer.rb:48:in `block in render_template'
+  actionpack (4.0.0) lib/action_view/renderer/template_renderer.rb:56:in `render_with_layout'
+  actionpack (4.0.0) lib/action_view/renderer/template_renderer.rb:47:in `render_template'
+  actionpack (4.0.0) lib/action_view/renderer/template_renderer.rb:17:in `render'
+  actionpack (4.0.0) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionpack (4.0.0) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionpack (4.0.0) lib/abstract_controller/rendering.rb:127:in `_render_template'
+  actionpack (4.0.0) lib/action_controller/metal/streaming.rb:219:in `_render_template'
+  actionpack (4.0.0) lib/abstract_controller/rendering.rb:120:in `render_to_body'
+  actionpack (4.0.0) lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+  actionpack (4.0.0) lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+  actionpack (4.0.0) lib/abstract_controller/rendering.rb:97:in `render'
+  actionpack (4.0.0) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.0.0) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  c:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+  activesupport (4.0.0) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.0.0) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.0.0) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.0.0) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.0.0) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.0.0) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.0.0) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:423:in `_run__751188375__process_action__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (4.0.0) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.0.0) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.0) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.0) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.0.0) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+  activerecord (4.0.0) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.0.0) lib/abstract_controller/base.rb:136:in `process'
+  actionpack (4.0.0) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.0) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.0) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.0) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:80:in `call'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:655:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.0) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.0) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:373:in `_run__247389698__call__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  c:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  c:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  c:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (21.0ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2013-12-12 19:02:27 -0700
+Processing by PinsController#index as HTML
+  [1m[35mPin Load (0.0ms)[0m  SELECT "pins".* FROM "pins"
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered pins/index.html.erb within layouts/application (55.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+Completed 200 OK in 80ms (Views: 78.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/bootstrap_and_customization.css?body=1" for 127.0.0.1 at 2013-12-12 19:02:27 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-12 19:02:27 -0700
+
+
+Started GET "/assets/pins.css?body=1" for 127.0.0.1 at 2013-12-12 19:02:27 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-12 19:02:27 -0700
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-12-12 19:02:27 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-12 19:02:27 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2013-12-12 19:02:27 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2013-12-12 19:02:27 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2013-12-12 19:02:27 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2013-12-12 19:02:27 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2013-12-12 19:02:27 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2013-12-12 19:02:27 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2013-12-12 19:02:27 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2013-12-12 19:02:27 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2013-12-12 19:02:27 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2013-12-12 19:02:27 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2013-12-12 19:02:27 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2013-12-12 19:02:28 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-12 19:02:28 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-12 19:02:28 -0700
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-12-12 19:02:28 -0700
+
+
+Started GET "/assets/pins.js?body=1" for 127.0.0.1 at 2013-12-12 19:02:28 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-12 19:02:28 -0700
+
+
+Started GET "/pins/2" for 127.0.0.1 at 2013-12-12 19:02:37 -0700
+Processing by PinsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mPin Load (0.0ms)[0m  SELECT "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT 1  [["id", "2"]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered pins/show.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+Completed 200 OK in 32ms (Views: 23.0ms | ActiveRecord: 0.0ms)
+  [1m[36mPin Load (0.0ms)[0m  [1mSELECT "pins".* FROM "pins" WHERE "pins"."user_id" = ? AND "pins"."id" = ? LIMIT 1[0m  [["user_id", 1], ["id", 1]]
+
+
+Started GET "/pins" for 127.0.0.1 at 2013-12-12 19:11:41 -0700
+
+SyntaxError (c:/Users/cory smith/desktop/pinteresting/app/controllers/pins_controller.rb:56: syntax error, unexpected $end, expecting keyword_end):
+  activesupport (4.0.0) lib/active_support/dependencies.rb:423:in `load'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:423:in `block in load_file'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:615:in `new_constants_in'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:422:in `load_file'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:323:in `require_or_load'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:462:in `load_missing_constant'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:183:in `const_missing'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:226:in `const_get'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:226:in `block in constantize'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:224:in `each'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:224:in `inject'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:224:in `constantize'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:534:in `get'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:565:in `constantize'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:76:in `controller_reference'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:66:in `controller'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:44:in `call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:655:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.0) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.0) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:373:in `_run__247389698__call__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  c:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  c:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  c:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+  Rendered c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (31.0ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2013-12-12 19:12:35 -0700
+Processing by PinsController#index as HTML
+  [1m[35mPin Load (1.0ms)[0m  SELECT "pins".* FROM "pins"
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered pins/index.html.erb within layouts/application (41.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+Completed 200 OK in 79ms (Views: 73.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-12 19:12:35 -0700
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-12-12 19:12:35 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-12 19:12:35 -0700
+
+
+Started GET "/assets/pins.css?body=1" for 127.0.0.1 at 2013-12-12 19:12:35 -0700
+
+
+Started GET "/assets/bootstrap_and_customization.css?body=1" for 127.0.0.1 at 2013-12-12 19:12:35 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-12 19:12:35 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2013-12-12 19:12:35 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2013-12-12 19:12:35 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2013-12-12 19:12:35 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2013-12-12 19:12:35 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2013-12-12 19:12:35 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2013-12-12 19:12:35 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2013-12-12 19:12:35 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2013-12-12 19:12:35 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2013-12-12 19:12:35 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2013-12-12 19:12:35 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2013-12-12 19:12:36 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2013-12-12 19:12:36 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-12 19:12:36 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-12 19:12:36 -0700
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-12-12 19:12:36 -0700
+
+
+Started GET "/assets/pins.js?body=1" for 127.0.0.1 at 2013-12-12 19:12:36 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-12 19:12:36 -0700
+
+
+Started GET "/pins/2/edit" for 127.0.0.1 at 2013-12-12 19:14:28 -0700
+Processing by PinsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mPin Load (0.0ms)[0m  SELECT "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT 1  [["id", "2"]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPin Load (0.0ms)[0m  SELECT "pins".* FROM "pins" WHERE "pins"."user_id" = ? AND "pins"."id" = ? LIMIT 1  [["user_id", 1], ["id", "2"]]
+Completed 404 Not Found in 6ms
+
+ActiveRecord::RecordNotFound (Couldn't find Pin with id=2 [WHERE "pins"."user_id" = ?]):
+  app/controllers/pins_controller.rb:49:in `correct_user'
+
+
+  Rendered c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (30.0ms)
+
+
+Started GET "/pins/2/edit" for 127.0.0.1 at 2013-12-12 19:15:43 -0700
+Processing by PinsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPin Load (1.0ms)[0m  [1mSELECT "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPin Load (0.0ms)[0m  [1mSELECT "pins".* FROM "pins" WHERE "pins"."user_id" = ? AND "pins"."id" = 2 LIMIT 1[0m  [["user_id", 1]]
+Redirected to http://localhost:3000/pins
+Filter chain halted as :correct_user rendered or redirected
+Completed 302 Found in 42ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2013-12-12 19:15:43 -0700
+Processing by PinsController#index as HTML
+  [1m[35mPin Load (1.0ms)[0m  SELECT "pins".* FROM "pins"
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered pins/index.html.erb within layouts/application (9.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+Completed 200 OK in 32ms (Views: 30.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-12-12 19:15:43 -0700
+
+
+Started GET "/assets/bootstrap_and_customization.css?body=1" for 127.0.0.1 at 2013-12-12 19:15:43 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-12 19:15:43 -0700
+
+
+Started GET "/assets/pins.css?body=1" for 127.0.0.1 at 2013-12-12 19:15:43 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-12 19:15:43 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-12 19:15:43 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2013-12-12 19:15:43 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2013-12-12 19:15:43 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2013-12-12 19:15:43 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2013-12-12 19:15:43 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2013-12-12 19:15:43 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2013-12-12 19:15:43 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2013-12-12 19:15:43 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2013-12-12 19:15:44 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2013-12-12 19:15:44 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2013-12-12 19:15:44 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2013-12-12 19:15:44 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2013-12-12 19:15:44 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-12 19:15:44 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-12 19:15:44 -0700
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-12-12 19:15:44 -0700
+
+
+Started GET "/assets/pins.js?body=1" for 127.0.0.1 at 2013-12-12 19:15:44 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-12 19:15:44 -0700
+
+
+Started GET "/pins" for 127.0.0.1 at 2013-12-12 19:17:22 -0700
+Processing by PinsController#index as HTML
+  [1m[35mPin Load (1.0ms)[0m  SELECT "pins".* FROM "pins"
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered pins/index.html.erb within layouts/application (59.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+Completed 200 OK in 86ms (Views: 80.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-12 19:17:22 -0700
+
+
+Started GET "/assets/bootstrap_and_customization.css?body=1" for 127.0.0.1 at 2013-12-12 19:17:22 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-12 19:17:22 -0700
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-12-12 19:17:22 -0700
+
+
+Started GET "/assets/pins.css?body=1" for 127.0.0.1 at 2013-12-12 19:17:22 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-12 19:17:22 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2013-12-12 19:17:22 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2013-12-12 19:17:22 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2013-12-12 19:17:22 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2013-12-12 19:17:22 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2013-12-12 19:17:22 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2013-12-12 19:17:23 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2013-12-12 19:17:23 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2013-12-12 19:17:23 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2013-12-12 19:17:23 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2013-12-12 19:17:23 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2013-12-12 19:17:23 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2013-12-12 19:17:23 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-12 19:17:23 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-12 19:17:23 -0700
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-12-12 19:17:23 -0700
+
+
+Started GET "/assets/pins.js?body=1" for 127.0.0.1 at 2013-12-12 19:17:23 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-12 19:17:23 -0700
+
+
+Started GET "/pins/2/edit" for 127.0.0.1 at 2013-12-12 19:17:33 -0700
+Processing by PinsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mPin Load (1.0ms)[0m  SELECT "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT 1  [["id", "2"]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPin Load (1.0ms)[0m  SELECT "pins".* FROM "pins" WHERE "pins"."user_id" = ? AND "pins"."id" = 2 LIMIT 1  [["user_id", 1]]
+Redirected to http://localhost:3000/pins
+Filter chain halted as :correct_user rendered or redirected
+Completed 302 Found in 7ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2013-12-12 19:17:33 -0700
+Processing by PinsController#index as HTML
+  [1m[36mPin Load (1.0ms)[0m  [1mSELECT "pins".* FROM "pins"[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered pins/index.html.erb within layouts/application (6.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+Completed 200 OK in 29ms (Views: 28.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-12-12 19:17:33 -0700
+
+
+Started GET "/assets/pins.css?body=1" for 127.0.0.1 at 2013-12-12 19:17:33 -0700
+
+
+Started GET "/assets/bootstrap_and_customization.css?body=1" for 127.0.0.1 at 2013-12-12 19:17:33 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-12 19:17:33 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-12 19:17:33 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-12 19:17:33 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2013-12-12 19:17:33 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2013-12-12 19:17:33 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2013-12-12 19:17:33 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2013-12-12 19:17:33 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2013-12-12 19:17:33 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2013-12-12 19:17:33 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2013-12-12 19:17:33 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2013-12-12 19:17:33 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2013-12-12 19:17:33 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2013-12-12 19:17:33 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2013-12-12 19:17:33 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2013-12-12 19:17:34 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-12 19:17:34 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-12 19:17:34 -0700
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-12-12 19:17:34 -0700
+
+
+Started GET "/assets/pins.js?body=1" for 127.0.0.1 at 2013-12-12 19:17:34 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-12 19:17:34 -0700
+
+
+Started GET "/pins" for 127.0.0.1 at 2013-12-12 19:17:38 -0700
+Processing by PinsController#index as HTML
+  [1m[36mPin Load (0.0ms)[0m  [1mSELECT "pins".* FROM "pins"[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered pins/index.html.erb within layouts/application (6.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 29ms (Views: 27.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/bootstrap_and_customization.css?body=1" for 127.0.0.1 at 2013-12-12 19:17:38 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-12 19:17:38 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-12 19:17:38 -0700
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-12-12 19:17:38 -0700
+
+
+Started GET "/assets/pins.css?body=1" for 127.0.0.1 at 2013-12-12 19:17:38 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-12 19:17:39 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2013-12-12 19:17:39 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2013-12-12 19:17:39 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2013-12-12 19:17:39 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2013-12-12 19:17:39 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2013-12-12 19:17:39 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2013-12-12 19:17:39 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2013-12-12 19:17:39 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2013-12-12 19:17:39 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2013-12-12 19:17:39 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2013-12-12 19:17:39 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2013-12-12 19:17:39 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2013-12-12 19:17:39 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-12 19:17:39 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-12 19:17:39 -0700
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-12-12 19:17:39 -0700
+
+
+Started GET "/assets/pins.js?body=1" for 127.0.0.1 at 2013-12-12 19:17:39 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-12 19:17:39 -0700
+
+
+Started GET "/pins/2" for 127.0.0.1 at 2013-12-12 19:20:45 -0700
+Processing by PinsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPin Load (0.0ms)[0m  [1mSELECT "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered pins/show.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 32ms (Views: 23.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pins/2" for 127.0.0.1 at 2013-12-12 19:23:46 -0700
+Processing by PinsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPin Load (1.0ms)[0m  [1mSELECT "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered pins/show.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 27ms (Views: 23.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-12 19:23:47 -0700
+
+
+Started GET "/assets/bootstrap_and_customization.css?body=1" for 127.0.0.1 at 2013-12-12 19:23:47 -0700
+
+
+Started GET "/assets/pins.css?body=1" for 127.0.0.1 at 2013-12-12 19:23:47 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-12 19:23:47 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-12 19:23:47 -0700
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-12-12 19:23:47 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2013-12-12 19:23:47 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2013-12-12 19:23:47 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2013-12-12 19:23:47 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2013-12-12 19:23:47 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2013-12-12 19:23:47 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2013-12-12 19:23:47 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2013-12-12 19:23:47 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2013-12-12 19:23:47 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2013-12-12 19:23:47 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2013-12-12 19:23:47 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2013-12-12 19:23:47 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2013-12-12 19:23:47 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-12 19:23:48 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-12 19:23:48 -0700
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-12-12 19:23:48 -0700
+
+
+Started GET "/assets/pins.js?body=1" for 127.0.0.1 at 2013-12-12 19:23:48 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-12 19:23:48 -0700
