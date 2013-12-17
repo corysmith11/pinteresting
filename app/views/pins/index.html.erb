@@ -8,7 +8,7 @@
         <%= pin.description %><br/>
         
         <% if pin.user == current_user %>
-          <strong><%= pin.user.name if pin.user %></strong>
+          <strong> Posted by <%= link_to pin.user.name if pin.user %></strong>
           <div class="actions">
             <%= link_to edit_pin_path(pin) do %>
               <span class="glyphicon glyphicon-edit"></span>
