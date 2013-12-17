@@ -29299,3 +29299,896 @@ Completed 200 OK in 151ms (Views: 104.0ms | ActiveRecord: 42.0ms)
 
 
 Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-16 23:23:07 -0700
+
+
+Started GET "/pins" for 127.0.0.1 at 2013-12-16 23:32:08 -0700
+Processing by PinsController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPin Load (0.0ms)[0m  SELECT "pins".* FROM "pins" ORDER BY created_at DESC
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered pins/index.html.erb within layouts/application (13.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+Completed 200 OK in 41ms (Views: 40.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-16 23:32:08 -0700
+
+
+Started GET "/pins" for 127.0.0.1 at 2013-12-16 23:33:58 -0700
+Processing by PinsController#index as HTML
+  [1m[36mPin Load (0.0ms)[0m  [1mSELECT "pins".* FROM "pins" ORDER BY created_at DESC[0m
+Completed 500 Internal Server Error in 41ms
+
+NoMethodError (undefined method `paginate' for #<ActiveRecord::Relation::ActiveRecord_Relation_Pin:0x60f5490>):
+  app/controllers/pins_controller.rb:7:in `index'
+
+
+  Rendered c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+  Rendered c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (91.0ms)
+
+
+Started GET "/pins" for 127.0.0.1 at 2013-12-16 23:34:28 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PinsController#index as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPin Load (1.0ms)[0m  [1mSELECT "pins".* FROM "pins" ORDER BY created_at DESC LIMIT 8 OFFSET 0[0m
+  [1m[35mUser Load (6.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered pins/index.html.erb within layouts/application (128.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 394ms (Views: 344.0ms | ActiveRecord: 10.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-16 23:34:29 -0700
+
+
+Started GET "/pins/new" for 127.0.0.1 at 2013-12-16 23:34:45 -0700
+Processing by PinsController#new as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered pins/_form.html.erb (46.0ms)
+  Rendered pins/new.html.erb within layouts/application (48.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 94ms (Views: 73.0ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/pins" for 127.0.0.1 at 2013-12-16 23:35:05 -0700
+Processing by PinsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"76Q2/Svkks9nBe6efnz6f0gsIziw7B3AUUi9lXf4pzQ=", "pin"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x3ff55b0 @tempfile=#<File:C:/Users/CORYSM~1/AppData/Local/Temp/RackMultipart20131216-7044-mrbzbt>, @original_filename="Misc 010.JPG", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"pin[image]\"; filename=\"Misc 010.JPG\"\r\nContent-Type: image/jpeg\r\n">, "description"=>"fishing"}, "commit"=>"Create Pin"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+Command :: identify -format '%wx%h,%[exif:orientation]' "C:/Users/CORYSM~1/AppData/Local/Temp/Misc 01020131216-7044-1n8ln7t.JPG[0]"
+Command :: identify -format %m "C:/Users/CORYSM~1/AppData/Local/Temp/Misc 01020131216-7044-1n8ln7t.JPG[0]"
+Command :: identify -format %m "C:/Users/CORYSM~1/AppData/Local/Temp/Misc 01020131216-7044-1n8ln7t.JPG[0]"
+Command :: identify -format %m "C:/Users/CORYSM~1/AppData/Local/Temp/Misc 01020131216-7044-1n8ln7t.JPG[0]"
+Command :: convert "C:/Users/CORYSM~1/AppData/Local/Temp/Misc 01020131216-7044-1n8ln7t.JPG[0]" -auto-orient -resize "1136x640>" "C:/Users/CORYSM~1/AppData/Local/Temp/Misc 01020131216-7044-1n8ln7t20131216-7044-1xjqp21"
+Command :: file -b --mime "C:/Users/CORYSM~1/AppData/Local/Temp/Misc 01020131216-7044-1n8ln7t20131216-7044-1xjqp21"
+[paperclip] Error while determining content type: Cocaine::CommandNotFoundError
+Command :: identify -format '%wx%h,%[exif:orientation]' "C:/Users/CORYSM~1/AppData/Local/Temp/Misc 01020131216-7044-1n8ln7t.JPG[0]"
+Command :: identify -format %m "C:/Users/CORYSM~1/AppData/Local/Temp/Misc 01020131216-7044-1n8ln7t.JPG[0]"
+Command :: identify -format %m "C:/Users/CORYSM~1/AppData/Local/Temp/Misc 01020131216-7044-1n8ln7t.JPG[0]"
+Command :: identify -format %m "C:/Users/CORYSM~1/AppData/Local/Temp/Misc 01020131216-7044-1n8ln7t.JPG[0]"
+Command :: convert "C:/Users/CORYSM~1/AppData/Local/Temp/Misc 01020131216-7044-1n8ln7t.JPG[0]" -auto-orient -resize "100x100>" "C:/Users/CORYSM~1/AppData/Local/Temp/Misc 01020131216-7044-1n8ln7t20131216-7044-1hq2w2d"
+Command :: file -b --mime "C:/Users/CORYSM~1/AppData/Local/Temp/Misc 01020131216-7044-1n8ln7t20131216-7044-1hq2w2d"
+[paperclip] Error while determining content type: Cocaine::CommandNotFoundError
+  [1m[35m (0.0ms)[0m  begin transaction
+Binary data inserted for `string` type on column `image_content_type`
+  [1m[36mSQL (4.0ms)[0m  [1mINSERT INTO "pins" ("created_at", "description", "image_content_type", "image_file_name", "image_file_size", "image_updated_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 17 Dec 2013 06:35:06 UTC +00:00], ["description", "fishing"], ["image_content_type", "image/jpeg"], ["image_file_name", "Misc_010.JPG"], ["image_file_size", 2156172], ["image_updated_at", Tue, 17 Dec 2013 06:35:05 UTC +00:00], ["updated_at", Tue, 17 Dec 2013 06:35:06 UTC +00:00], ["user_id", 1]]
+  [1m[35m (6.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/pins/14
+Completed 302 Found in 1477ms (ActiveRecord: 10.0ms)
+
+
+Started GET "/pins/14" for 127.0.0.1 at 2013-12-16 23:35:06 -0700
+Processing by PinsController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mPin Load (1.0ms)[0m  [1mSELECT "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT 1[0m  [["id", "14"]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered pins/show.html.erb within layouts/application (5.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 31ms (Views: 29.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-16 23:35:06 -0700
+
+
+Started GET "/pins" for 127.0.0.1 at 2013-12-16 23:35:10 -0700
+Processing by PinsController#index as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPin Load (1.0ms)[0m  [1mSELECT "pins".* FROM "pins" ORDER BY created_at DESC LIMIT 8 OFFSET 0[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered pins/index.html.erb within layouts/application (16.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+Completed 200 OK in 42ms (Views: 40.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/pins/new" for 127.0.0.1 at 2013-12-16 23:35:16 -0700
+Processing by PinsController#new as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered pins/_form.html.erb (2.0ms)
+  Rendered pins/new.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 30ms (Views: 28.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/pins" for 127.0.0.1 at 2013-12-16 23:36:17 -0700
+Processing by PinsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"76Q2/Svkks9nBe6efnz6f0gsIziw7B3AUUi9lXf4pzQ=", "pin"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x3f1ac70 @tempfile=#<File:C:/Users/CORYSM~1/AppData/Local/Temp/RackMultipart20131216-7044-weayzi>, @original_filename="Misc 102.JPG", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"pin[image]\"; filename=\"Misc 102.JPG\"\r\nContent-Type: image/jpeg\r\n">, "description"=>"Hiking"}, "commit"=>"Create Pin"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+Command :: identify -format '%wx%h,%[exif:orientation]' "C:/Users/CORYSM~1/AppData/Local/Temp/Misc 10220131216-7044-1l4x68p.JPG[0]"
+Command :: identify -format %m "C:/Users/CORYSM~1/AppData/Local/Temp/Misc 10220131216-7044-1l4x68p.JPG[0]"
+Command :: identify -format %m "C:/Users/CORYSM~1/AppData/Local/Temp/Misc 10220131216-7044-1l4x68p.JPG[0]"
+Command :: identify -format %m "C:/Users/CORYSM~1/AppData/Local/Temp/Misc 10220131216-7044-1l4x68p.JPG[0]"
+Command :: convert "C:/Users/CORYSM~1/AppData/Local/Temp/Misc 10220131216-7044-1l4x68p.JPG[0]" -auto-orient -resize "1136x640>" "C:/Users/CORYSM~1/AppData/Local/Temp/Misc 10220131216-7044-1l4x68p20131216-7044-hnebi8"
+Command :: file -b --mime "C:/Users/CORYSM~1/AppData/Local/Temp/Misc 10220131216-7044-1l4x68p20131216-7044-hnebi8"
+[paperclip] Error while determining content type: Cocaine::CommandNotFoundError
+Command :: identify -format '%wx%h,%[exif:orientation]' "C:/Users/CORYSM~1/AppData/Local/Temp/Misc 10220131216-7044-1l4x68p.JPG[0]"
+Command :: identify -format %m "C:/Users/CORYSM~1/AppData/Local/Temp/Misc 10220131216-7044-1l4x68p.JPG[0]"
+Command :: identify -format %m "C:/Users/CORYSM~1/AppData/Local/Temp/Misc 10220131216-7044-1l4x68p.JPG[0]"
+Command :: identify -format %m "C:/Users/CORYSM~1/AppData/Local/Temp/Misc 10220131216-7044-1l4x68p.JPG[0]"
+Command :: convert "C:/Users/CORYSM~1/AppData/Local/Temp/Misc 10220131216-7044-1l4x68p.JPG[0]" -auto-orient -resize "100x100>" "C:/Users/CORYSM~1/AppData/Local/Temp/Misc 10220131216-7044-1l4x68p20131216-7044-12dcy8"
+Command :: file -b --mime "C:/Users/CORYSM~1/AppData/Local/Temp/Misc 10220131216-7044-1l4x68p20131216-7044-12dcy8"
+[paperclip] Error while determining content type: Cocaine::CommandNotFoundError
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Binary data inserted for `string` type on column `image_content_type`
+  [1m[35mSQL (2.0ms)[0m  INSERT INTO "pins" ("created_at", "description", "image_content_type", "image_file_name", "image_file_size", "image_updated_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Tue, 17 Dec 2013 06:36:19 UTC +00:00], ["description", "Hiking"], ["image_content_type", "image/jpeg"], ["image_file_name", "Misc_102.JPG"], ["image_file_size", 2126820], ["image_updated_at", Tue, 17 Dec 2013 06:36:17 UTC +00:00], ["updated_at", Tue, 17 Dec 2013 06:36:19 UTC +00:00], ["user_id", 1]]
+  [1m[36m (6.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/pins/15
+Completed 302 Found in 1421ms (ActiveRecord: 9.0ms)
+
+
+Started GET "/pins/15" for 127.0.0.1 at 2013-12-16 23:36:19 -0700
+Processing by PinsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[35mPin Load (0.0ms)[0m  SELECT "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT 1  [["id", "15"]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered pins/show.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 49ms (Views: 45.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-16 23:36:19 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-16 23:36:19 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2013-12-16 23:36:19 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2013-12-16 23:36:19 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2013-12-16 23:36:19 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2013-12-16 23:36:19 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2013-12-16 23:36:19 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2013-12-16 23:36:19 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2013-12-16 23:36:20 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2013-12-16 23:36:20 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2013-12-16 23:36:20 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2013-12-16 23:36:20 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2013-12-16 23:36:20 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2013-12-16 23:36:20 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-16 23:36:20 -0700
+
+
+Started GET "/assets/jquery.turbolinks.js?body=1" for 127.0.0.1 at 2013-12-16 23:36:20 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-16 23:36:20 -0700
+
+
+Started GET "/assets/masonry/jquery.masonry.js?body=1" for 127.0.0.1 at 2013-12-16 23:36:20 -0700
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-12-16 23:36:20 -0700
+
+
+Started GET "/assets/pins.js?body=1" for 127.0.0.1 at 2013-12-16 23:36:20 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-16 23:36:20 -0700
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2013-12-16 23:36:20 -0700
+
+
+Started GET "/pins" for 127.0.0.1 at 2013-12-16 23:36:23 -0700
+Processing by PinsController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPin Load (0.0ms)[0m  SELECT "pins".* FROM "pins" ORDER BY created_at DESC LIMIT 8 OFFSET 0
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered pins/index.html.erb within layouts/application (18.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 44ms (Views: 43.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pins/new" for 127.0.0.1 at 2013-12-16 23:36:51 -0700
+Processing by PinsController#new as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered pins/_form.html.erb (2.0ms)
+  Rendered pins/new.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 30ms (Views: 28.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/pins" for 127.0.0.1 at 2013-12-16 23:37:10 -0700
+Processing by PinsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"76Q2/Svkks9nBe6efnz6f0gsIziw7B3AUUi9lXf4pzQ=", "pin"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x3f1ec30 @tempfile=#<File:C:/Users/CORYSM~1/AppData/Local/Temp/RackMultipart20131216-7044-1md1t35>, @original_filename="Misc 131.JPG", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"pin[image]\"; filename=\"Misc 131.JPG\"\r\nContent-Type: image/jpeg\r\n">, "description"=>"White Mountains"}, "commit"=>"Create Pin"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+Command :: identify -format '%wx%h,%[exif:orientation]' "C:/Users/CORYSM~1/AppData/Local/Temp/Misc 13120131216-7044-c6tpu8.JPG[0]"
+Command :: identify -format %m "C:/Users/CORYSM~1/AppData/Local/Temp/Misc 13120131216-7044-c6tpu8.JPG[0]"
+Command :: identify -format %m "C:/Users/CORYSM~1/AppData/Local/Temp/Misc 13120131216-7044-c6tpu8.JPG[0]"
+Command :: identify -format %m "C:/Users/CORYSM~1/AppData/Local/Temp/Misc 13120131216-7044-c6tpu8.JPG[0]"
+Command :: convert "C:/Users/CORYSM~1/AppData/Local/Temp/Misc 13120131216-7044-c6tpu8.JPG[0]" -auto-orient -resize "1136x640>" "C:/Users/CORYSM~1/AppData/Local/Temp/Misc 13120131216-7044-c6tpu820131216-7044-1vsdksy"
+Command :: file -b --mime "C:/Users/CORYSM~1/AppData/Local/Temp/Misc 13120131216-7044-c6tpu820131216-7044-1vsdksy"
+[paperclip] Error while determining content type: Cocaine::CommandNotFoundError
+Command :: identify -format '%wx%h,%[exif:orientation]' "C:/Users/CORYSM~1/AppData/Local/Temp/Misc 13120131216-7044-c6tpu8.JPG[0]"
+Command :: identify -format %m "C:/Users/CORYSM~1/AppData/Local/Temp/Misc 13120131216-7044-c6tpu8.JPG[0]"
+Command :: identify -format %m "C:/Users/CORYSM~1/AppData/Local/Temp/Misc 13120131216-7044-c6tpu8.JPG[0]"
+Command :: identify -format %m "C:/Users/CORYSM~1/AppData/Local/Temp/Misc 13120131216-7044-c6tpu8.JPG[0]"
+Command :: convert "C:/Users/CORYSM~1/AppData/Local/Temp/Misc 13120131216-7044-c6tpu8.JPG[0]" -auto-orient -resize "100x100>" "C:/Users/CORYSM~1/AppData/Local/Temp/Misc 13120131216-7044-c6tpu820131216-7044-1opsm4r"
+Command :: file -b --mime "C:/Users/CORYSM~1/AppData/Local/Temp/Misc 13120131216-7044-c6tpu820131216-7044-1opsm4r"
+[paperclip] Error while determining content type: Cocaine::CommandNotFoundError
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Binary data inserted for `string` type on column `image_content_type`
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "pins" ("created_at", "description", "image_content_type", "image_file_name", "image_file_size", "image_updated_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Tue, 17 Dec 2013 06:37:11 UTC +00:00], ["description", "White Mountains"], ["image_content_type", "image/jpeg"], ["image_file_name", "Misc_131.JPG"], ["image_file_size", 2156593], ["image_updated_at", Tue, 17 Dec 2013 06:37:10 UTC +00:00], ["updated_at", Tue, 17 Dec 2013 06:37:11 UTC +00:00], ["user_id", 1]]
+  [1m[36m (5.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/pins/16
+Completed 302 Found in 1509ms (ActiveRecord: 7.0ms)
+
+
+Started GET "/pins/16" for 127.0.0.1 at 2013-12-16 23:37:11 -0700
+Processing by PinsController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[35mPin Load (0.0ms)[0m  SELECT "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT 1  [["id", "16"]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered pins/show.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 47ms (Views: 26.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-16 23:37:11 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-16 23:37:12 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2013-12-16 23:37:12 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2013-12-16 23:37:12 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2013-12-16 23:37:12 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2013-12-16 23:37:12 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2013-12-16 23:37:12 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2013-12-16 23:37:12 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2013-12-16 23:37:12 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2013-12-16 23:37:12 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2013-12-16 23:37:12 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2013-12-16 23:37:12 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2013-12-16 23:37:12 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2013-12-16 23:37:12 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-16 23:37:12 -0700
+
+
+Started GET "/assets/jquery.turbolinks.js?body=1" for 127.0.0.1 at 2013-12-16 23:37:12 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-16 23:37:13 -0700
+
+
+Started GET "/assets/masonry/jquery.masonry.js?body=1" for 127.0.0.1 at 2013-12-16 23:37:13 -0700
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-12-16 23:37:13 -0700
+
+
+Started GET "/assets/pins.js?body=1" for 127.0.0.1 at 2013-12-16 23:37:13 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-16 23:37:13 -0700
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2013-12-16 23:37:13 -0700
+
+
+Started GET "/pins/new" for 127.0.0.1 at 2013-12-16 23:37:20 -0700
+Processing by PinsController#new as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered pins/_form.html.erb (3.0ms)
+  Rendered pins/new.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+Completed 200 OK in 31ms (Views: 28.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/pins" for 127.0.0.1 at 2013-12-16 23:37:38 -0700
+Processing by PinsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"76Q2/Svkks9nBe6efnz6f0gsIziw7B3AUUi9lXf4pzQ=", "pin"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x3f2b368 @tempfile=#<File:C:/Users/CORYSM~1/AppData/Local/Temp/RackMultipart20131216-7044-u0oq17>, @original_filename="Misc 144.JPG", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"pin[image]\"; filename=\"Misc 144.JPG\"\r\nContent-Type: image/jpeg\r\n">, "description"=>"Elk"}, "commit"=>"Create Pin"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+Command :: identify -format '%wx%h,%[exif:orientation]' "C:/Users/CORYSM~1/AppData/Local/Temp/Misc 14420131216-7044-wp72oj.JPG[0]"
+Command :: identify -format %m "C:/Users/CORYSM~1/AppData/Local/Temp/Misc 14420131216-7044-wp72oj.JPG[0]"
+Command :: identify -format %m "C:/Users/CORYSM~1/AppData/Local/Temp/Misc 14420131216-7044-wp72oj.JPG[0]"
+Command :: identify -format %m "C:/Users/CORYSM~1/AppData/Local/Temp/Misc 14420131216-7044-wp72oj.JPG[0]"
+Command :: convert "C:/Users/CORYSM~1/AppData/Local/Temp/Misc 14420131216-7044-wp72oj.JPG[0]" -auto-orient -resize "1136x640>" "C:/Users/CORYSM~1/AppData/Local/Temp/Misc 14420131216-7044-wp72oj20131216-7044-41gvg5"
+Command :: file -b --mime "C:/Users/CORYSM~1/AppData/Local/Temp/Misc 14420131216-7044-wp72oj20131216-7044-41gvg5"
+[paperclip] Error while determining content type: Cocaine::CommandNotFoundError
+Command :: identify -format '%wx%h,%[exif:orientation]' "C:/Users/CORYSM~1/AppData/Local/Temp/Misc 14420131216-7044-wp72oj.JPG[0]"
+Command :: identify -format %m "C:/Users/CORYSM~1/AppData/Local/Temp/Misc 14420131216-7044-wp72oj.JPG[0]"
+Command :: identify -format %m "C:/Users/CORYSM~1/AppData/Local/Temp/Misc 14420131216-7044-wp72oj.JPG[0]"
+Command :: identify -format %m "C:/Users/CORYSM~1/AppData/Local/Temp/Misc 14420131216-7044-wp72oj.JPG[0]"
+Command :: convert "C:/Users/CORYSM~1/AppData/Local/Temp/Misc 14420131216-7044-wp72oj.JPG[0]" -auto-orient -resize "100x100>" "C:/Users/CORYSM~1/AppData/Local/Temp/Misc 14420131216-7044-wp72oj20131216-7044-19qzley"
+Command :: file -b --mime "C:/Users/CORYSM~1/AppData/Local/Temp/Misc 14420131216-7044-wp72oj20131216-7044-19qzley"
+[paperclip] Error while determining content type: Cocaine::CommandNotFoundError
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Binary data inserted for `string` type on column `image_content_type`
+  [1m[35mSQL (2.0ms)[0m  INSERT INTO "pins" ("created_at", "description", "image_content_type", "image_file_name", "image_file_size", "image_updated_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Tue, 17 Dec 2013 06:37:40 UTC +00:00], ["description", "Elk"], ["image_content_type", "image/jpeg"], ["image_file_name", "Misc_144.JPG"], ["image_file_size", 2121187], ["image_updated_at", Tue, 17 Dec 2013 06:37:38 UTC +00:00], ["updated_at", Tue, 17 Dec 2013 06:37:40 UTC +00:00], ["user_id", 1]]
+  [1m[36m (22.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/pins/17
+Completed 302 Found in 1592ms (ActiveRecord: 24.0ms)
+
+
+Started GET "/pins/17" for 127.0.0.1 at 2013-12-16 23:37:40 -0700
+Processing by PinsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[35mPin Load (0.0ms)[0m  SELECT "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT 1  [["id", "17"]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered pins/show.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 32ms (Views: 30.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-16 23:37:40 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-16 23:37:40 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2013-12-16 23:37:40 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2013-12-16 23:37:40 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2013-12-16 23:37:40 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2013-12-16 23:37:40 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2013-12-16 23:37:40 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2013-12-16 23:37:40 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2013-12-16 23:37:41 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2013-12-16 23:37:41 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2013-12-16 23:37:41 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2013-12-16 23:37:41 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2013-12-16 23:37:41 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2013-12-16 23:37:41 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-16 23:37:41 -0700
+
+
+Started GET "/assets/jquery.turbolinks.js?body=1" for 127.0.0.1 at 2013-12-16 23:37:41 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-16 23:37:41 -0700
+
+
+Started GET "/assets/masonry/jquery.masonry.js?body=1" for 127.0.0.1 at 2013-12-16 23:37:41 -0700
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-12-16 23:37:41 -0700
+
+
+Started GET "/assets/pins.js?body=1" for 127.0.0.1 at 2013-12-16 23:37:41 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-16 23:37:41 -0700
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2013-12-16 23:37:41 -0700
+
+
+Started GET "/pins/new" for 127.0.0.1 at 2013-12-16 23:37:44 -0700
+Processing by PinsController#new as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered pins/_form.html.erb (2.0ms)
+  Rendered pins/new.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+Completed 200 OK in 31ms (Views: 28.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/pins" for 127.0.0.1 at 2013-12-16 23:37:56 -0700
+Processing by PinsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"76Q2/Svkks9nBe6efnz6f0gsIziw7B3AUUi9lXf4pzQ=", "pin"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x3f24030 @tempfile=#<File:C:/Users/CORYSM~1/AppData/Local/Temp/RackMultipart20131216-7044-1jpsugi>, @original_filename="Misc 142.JPG", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"pin[image]\"; filename=\"Misc 142.JPG\"\r\nContent-Type: image/jpeg\r\n">, "description"=>"Elk 2"}, "commit"=>"Create Pin"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+Command :: identify -format '%wx%h,%[exif:orientation]' "C:/Users/CORYSM~1/AppData/Local/Temp/Misc 14220131216-7044-1vv5xlg.JPG[0]"
+Command :: identify -format %m "C:/Users/CORYSM~1/AppData/Local/Temp/Misc 14220131216-7044-1vv5xlg.JPG[0]"
+Command :: identify -format %m "C:/Users/CORYSM~1/AppData/Local/Temp/Misc 14220131216-7044-1vv5xlg.JPG[0]"
+Command :: identify -format %m "C:/Users/CORYSM~1/AppData/Local/Temp/Misc 14220131216-7044-1vv5xlg.JPG[0]"
+Command :: convert "C:/Users/CORYSM~1/AppData/Local/Temp/Misc 14220131216-7044-1vv5xlg.JPG[0]" -auto-orient -resize "1136x640>" "C:/Users/CORYSM~1/AppData/Local/Temp/Misc 14220131216-7044-1vv5xlg20131216-7044-3r21em"
+Command :: file -b --mime "C:/Users/CORYSM~1/AppData/Local/Temp/Misc 14220131216-7044-1vv5xlg20131216-7044-3r21em"
+[paperclip] Error while determining content type: Cocaine::CommandNotFoundError
+Command :: identify -format '%wx%h,%[exif:orientation]' "C:/Users/CORYSM~1/AppData/Local/Temp/Misc 14220131216-7044-1vv5xlg.JPG[0]"
+Command :: identify -format %m "C:/Users/CORYSM~1/AppData/Local/Temp/Misc 14220131216-7044-1vv5xlg.JPG[0]"
+Command :: identify -format %m "C:/Users/CORYSM~1/AppData/Local/Temp/Misc 14220131216-7044-1vv5xlg.JPG[0]"
+Command :: identify -format %m "C:/Users/CORYSM~1/AppData/Local/Temp/Misc 14220131216-7044-1vv5xlg.JPG[0]"
+Command :: convert "C:/Users/CORYSM~1/AppData/Local/Temp/Misc 14220131216-7044-1vv5xlg.JPG[0]" -auto-orient -resize "100x100>" "C:/Users/CORYSM~1/AppData/Local/Temp/Misc 14220131216-7044-1vv5xlg20131216-7044-spzyrw"
+Command :: file -b --mime "C:/Users/CORYSM~1/AppData/Local/Temp/Misc 14220131216-7044-1vv5xlg20131216-7044-spzyrw"
+[paperclip] Error while determining content type: Cocaine::CommandNotFoundError
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Binary data inserted for `string` type on column `image_content_type`
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "pins" ("created_at", "description", "image_content_type", "image_file_name", "image_file_size", "image_updated_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Tue, 17 Dec 2013 06:37:57 UTC +00:00], ["description", "Elk 2"], ["image_content_type", "image/jpeg"], ["image_file_name", "Misc_142.JPG"], ["image_file_size", 2191894], ["image_updated_at", Tue, 17 Dec 2013 06:37:56 UTC +00:00], ["updated_at", Tue, 17 Dec 2013 06:37:57 UTC +00:00], ["user_id", 1]]
+  [1m[36m (29.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/pins/18
+Completed 302 Found in 1813ms (ActiveRecord: 30.0ms)
+
+
+Started GET "/pins/18" for 127.0.0.1 at 2013-12-16 23:37:57 -0700
+Processing by PinsController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[35mPin Load (0.0ms)[0m  SELECT "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT 1  [["id", "18"]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered pins/show.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 47ms (Views: 44.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-16 23:37:57 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-16 23:37:58 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2013-12-16 23:37:58 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2013-12-16 23:37:58 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2013-12-16 23:37:58 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2013-12-16 23:37:58 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2013-12-16 23:37:58 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2013-12-16 23:37:58 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2013-12-16 23:37:58 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2013-12-16 23:37:58 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2013-12-16 23:37:58 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2013-12-16 23:37:58 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2013-12-16 23:37:58 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2013-12-16 23:37:58 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-16 23:37:58 -0700
+
+
+Started GET "/assets/jquery.turbolinks.js?body=1" for 127.0.0.1 at 2013-12-16 23:37:58 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-16 23:37:58 -0700
+
+
+Started GET "/assets/masonry/jquery.masonry.js?body=1" for 127.0.0.1 at 2013-12-16 23:37:59 -0700
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-12-16 23:37:59 -0700
+
+
+Started GET "/assets/pins.js?body=1" for 127.0.0.1 at 2013-12-16 23:37:59 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-16 23:37:59 -0700
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2013-12-16 23:37:59 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-16 23:38:00 -0700
+Processing by PinsController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPin Load (0.0ms)[0m  SELECT "pins".* FROM "pins" ORDER BY created_at DESC LIMIT 8 OFFSET 0
+  [1m[36m (38.0ms)[0m  [1mSELECT COUNT(*) FROM "pins"[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered pins/index.html.erb within layouts/application (83.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+Completed 200 OK in 108ms (Views: 68.0ms | ActiveRecord: 39.0ms)
+
+
+Started GET "/pins?page=2" for 127.0.0.1 at 2013-12-16 23:38:06 -0700
+Processing by PinsController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPin Load (0.0ms)[0m  [1mSELECT "pins".* FROM "pins" ORDER BY created_at DESC LIMIT 8 OFFSET 8[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered pins/index.html.erb within layouts/application (6.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+Completed 200 OK in 31ms (Views: 30.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pins?page=1" for 127.0.0.1 at 2013-12-16 23:38:08 -0700
+Processing by PinsController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPin Load (1.0ms)[0m  SELECT "pins".* FROM "pins" ORDER BY created_at DESC LIMIT 8 OFFSET 0
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "pins"[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered pins/index.html.erb within layouts/application (25.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+Completed 200 OK in 50ms (Views: 48.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-16 23:42:34 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PinsController#index as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPin Load (0.0ms)[0m  [1mSELECT "pins".* FROM "pins" ORDER BY created_at DESC LIMIT 8 OFFSET 0[0m
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "pins"
+  [1m[36mUser Load (7.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered pins/index.html.erb within layouts/application (136.0ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+Completed 200 OK in 446ms (Views: 400.0ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-16 23:42:37 -0700
+Processing by PinsController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPin Load (1.0ms)[0m  SELECT "pins".* FROM "pins" ORDER BY created_at DESC LIMIT 8 OFFSET 0
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "pins"[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered pins/index.html.erb within layouts/application (43.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 70ms (Views: 69.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-16 23:42:37 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2013-12-16 23:42:37 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2013-12-16 23:42:37 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-16 23:42:37 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2013-12-16 23:42:38 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2013-12-16 23:42:38 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2013-12-16 23:42:38 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2013-12-16 23:42:38 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2013-12-16 23:42:38 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2013-12-16 23:42:38 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2013-12-16 23:42:38 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2013-12-16 23:42:38 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2013-12-16 23:42:38 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2013-12-16 23:42:38 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-16 23:42:38 -0700
+
+
+Started GET "/assets/jquery.turbolinks.js?body=1" for 127.0.0.1 at 2013-12-16 23:42:38 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-16 23:42:38 -0700
+
+
+Started GET "/assets/masonry/jquery.masonry.js?body=1" for 127.0.0.1 at 2013-12-16 23:42:38 -0700
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-12-16 23:42:38 -0700
+
+
+Started GET "/assets/pins.js?body=1" for 127.0.0.1 at 2013-12-16 23:42:38 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-16 23:42:38 -0700
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2013-12-16 23:42:39 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-16 23:44:03 -0700
+Processing by PinsController#index as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPin Load (1.0ms)[0m  [1mSELECT "pins".* FROM "pins" ORDER BY created_at DESC LIMIT 8 OFFSET 0[0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "pins"
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered pins/index.html.erb within layouts/application (29.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+Completed 200 OK in 54ms (Views: 52.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-16 23:44:03 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2013-12-16 23:44:03 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2013-12-16 23:44:03 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-16 23:44:03 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2013-12-16 23:44:03 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2013-12-16 23:44:03 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2013-12-16 23:44:03 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2013-12-16 23:44:03 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2013-12-16 23:44:03 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2013-12-16 23:44:03 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2013-12-16 23:44:03 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2013-12-16 23:44:04 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2013-12-16 23:44:04 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2013-12-16 23:44:04 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-16 23:44:04 -0700
+
+
+Started GET "/assets/jquery.turbolinks.js?body=1" for 127.0.0.1 at 2013-12-16 23:44:04 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-16 23:44:04 -0700
+
+
+Started GET "/assets/masonry/jquery.masonry.js?body=1" for 127.0.0.1 at 2013-12-16 23:44:04 -0700
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-12-16 23:44:04 -0700
+
+
+Started GET "/assets/pins.js?body=1" for 127.0.0.1 at 2013-12-16 23:44:04 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-16 23:44:04 -0700
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2013-12-16 23:44:04 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-16 23:45:18 -0700
+Processing by PinsController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPin Load (0.0ms)[0m  SELECT "pins".* FROM "pins" ORDER BY created_at DESC LIMIT 8 OFFSET 0
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "pins"[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered pins/index.html.erb within layouts/application (27.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 54ms (Views: 53.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-16 23:45:19 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2013-12-16 23:45:19 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-16 23:45:19 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2013-12-16 23:45:19 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2013-12-16 23:45:19 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2013-12-16 23:45:19 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2013-12-16 23:45:19 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2013-12-16 23:45:19 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2013-12-16 23:45:19 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2013-12-16 23:45:19 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2013-12-16 23:45:19 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2013-12-16 23:45:19 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2013-12-16 23:45:19 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2013-12-16 23:45:19 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-16 23:45:19 -0700
+
+
+Started GET "/assets/jquery.turbolinks.js?body=1" for 127.0.0.1 at 2013-12-16 23:45:19 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-16 23:45:19 -0700
+
+
+Started GET "/assets/masonry/jquery.masonry.js?body=1" for 127.0.0.1 at 2013-12-16 23:45:20 -0700
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-12-16 23:45:20 -0700
+
+
+Started GET "/assets/pins.js?body=1" for 127.0.0.1 at 2013-12-16 23:45:20 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-16 23:45:20 -0700
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2013-12-16 23:45:20 -0700
