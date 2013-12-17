@@ -29020,3 +29020,282 @@ Processing by PinsController#index as HTML
   Rendered pins/index.html.erb within layouts/application (30.0ms)
   Rendered layouts/_header.html.erb (1.0ms)
 Completed 200 OK in 55ms (Views: 54.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pins/12" for 127.0.0.1 at 2013-12-16 22:23:17 -0700
+Processing by PinsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mPin Load (1.0ms)[0m  SELECT "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT 1  [["id", "12"]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered pins/show.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+Completed 200 OK in 45ms (Views: 41.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-16 22:39:07 -0700
+Processing by PinsController#index as HTML
+  Rendered pages/_home.html.erb (0.0ms)
+  [1m[35mPin Load (1.0ms)[0m  SELECT "pins".* FROM "pins"
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered pins/index.html.erb within layouts/application (51.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 93ms (Views: 85.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-16 22:39:07 -0700
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2013-12-16 22:39:10 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (5.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 33ms (Views: 31.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pins/6" for 127.0.0.1 at 2013-12-16 22:39:12 -0700
+Processing by PinsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mPin Load (0.0ms)[0m  SELECT "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT 1  [["id", "6"]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered pins/show.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_header.html.erb (17.0ms)
+Completed 200 OK in 46ms (Views: 44.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-16 22:42:13 -0700
+Processing by PinsController#index as HTML
+  Rendered pages/_home.html.erb (1.0ms)
+  [1m[35mPin Load (0.0ms)[0m  SELECT "pins".* FROM "pins"
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered pins/index.html.erb within layouts/application (15.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 38ms (Views: 37.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-16 22:42:13 -0700
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2013-12-16 22:42:15 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (0.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 31ms (Views: 29.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2013-12-16 22:42:17 -0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2PjeFaAicXiK57LR+ymfZizZxbG+kjKFLyCGZw7VCkg=", "user"=>{"email"=>"csmith@rycoleinvest.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'csmith@rycoleinvest.com' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = 1  [["last_sign_in_at", Tue, 17 Dec 2013 04:58:30 UTC +00:00], ["current_sign_in_at", Tue, 17 Dec 2013 05:42:17 UTC +00:00], ["sign_in_count", 19], ["updated_at", Tue, 17 Dec 2013 05:42:17 UTC +00:00]]
+  [1m[36m (4.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 117ms (ActiveRecord: 5.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-16 22:42:17 -0700
+Processing by PinsController#index as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPin Load (1.0ms)[0m  [1mSELECT "pins".* FROM "pins"[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered pins/index.html.erb within layouts/application (10.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 35ms (Views: 32.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-16 22:42:17 -0700
+
+
+Started GET "/pins/8" for 127.0.0.1 at 2013-12-16 22:42:19 -0700
+Processing by PinsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mPin Load (0.0ms)[0m  [1mSELECT "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT 1[0m  [["id", "8"]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered pins/show.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+Completed 200 OK in 30ms (Views: 28.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pins/12" for 127.0.0.1 at 2013-12-16 22:42:23 -0700
+Processing by PinsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mPin Load (1.0ms)[0m  SELECT "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT 1  [["id", "12"]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered pins/show.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+Completed 200 OK in 29ms (Views: 28.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2013-12-16 22:42:25 -0700
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-16 22:42:25 -0700
+
+
+Started GET "/pins/new" for 127.0.0.1 at 2013-12-16 22:42:28 -0700
+Processing by PinsController#new as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered pins/_form.html.erb (25.0ms)
+  Rendered pins/new.html.erb within layouts/application (36.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 120ms (Views: 63.0ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/pins" for 127.0.0.1 at 2013-12-16 22:42:47 -0700
+Processing by PinsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"76Q2/Svkks9nBe6efnz6f0gsIziw7B3AUUi9lXf4pzQ=", "pin"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x4015aa0 @tempfile=#<File:C:/Users/CORYSM~1/AppData/Local/Temp/RackMultipart20131216-7824-izfq56>, @original_filename="Misc 114.JPG", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"pin[image]\"; filename=\"Misc 114.JPG\"\r\nContent-Type: image/jpeg\r\n">, "description"=>"Water Fall Fossil Creek"}, "commit"=>"Create Pin"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+Command :: identify -format '%wx%h,%[exif:orientation]' "C:/Users/CORYSM~1/AppData/Local/Temp/Misc 11420131216-7824-1w7fsfw.JPG[0]"
+Command :: identify -format %m "C:/Users/CORYSM~1/AppData/Local/Temp/Misc 11420131216-7824-1w7fsfw.JPG[0]"
+Command :: identify -format %m "C:/Users/CORYSM~1/AppData/Local/Temp/Misc 11420131216-7824-1w7fsfw.JPG[0]"
+Command :: identify -format %m "C:/Users/CORYSM~1/AppData/Local/Temp/Misc 11420131216-7824-1w7fsfw.JPG[0]"
+Command :: convert "C:/Users/CORYSM~1/AppData/Local/Temp/Misc 11420131216-7824-1w7fsfw.JPG[0]" -auto-orient -resize "1136x640>" "C:/Users/CORYSM~1/AppData/Local/Temp/Misc 11420131216-7824-1w7fsfw20131216-7824-g5cft6"
+Command :: file -b --mime "C:/Users/CORYSM~1/AppData/Local/Temp/Misc 11420131216-7824-1w7fsfw20131216-7824-g5cft6"
+[paperclip] Error while determining content type: Cocaine::CommandNotFoundError
+Command :: identify -format '%wx%h,%[exif:orientation]' "C:/Users/CORYSM~1/AppData/Local/Temp/Misc 11420131216-7824-1w7fsfw.JPG[0]"
+Command :: identify -format %m "C:/Users/CORYSM~1/AppData/Local/Temp/Misc 11420131216-7824-1w7fsfw.JPG[0]"
+Command :: identify -format %m "C:/Users/CORYSM~1/AppData/Local/Temp/Misc 11420131216-7824-1w7fsfw.JPG[0]"
+Command :: identify -format %m "C:/Users/CORYSM~1/AppData/Local/Temp/Misc 11420131216-7824-1w7fsfw.JPG[0]"
+Command :: convert "C:/Users/CORYSM~1/AppData/Local/Temp/Misc 11420131216-7824-1w7fsfw.JPG[0]" -auto-orient -resize "100x100>" "C:/Users/CORYSM~1/AppData/Local/Temp/Misc 11420131216-7824-1w7fsfw20131216-7824-gv8ztk"
+Command :: file -b --mime "C:/Users/CORYSM~1/AppData/Local/Temp/Misc 11420131216-7824-1w7fsfw20131216-7824-gv8ztk"
+[paperclip] Error while determining content type: Cocaine::CommandNotFoundError
+  [1m[35m (1.0ms)[0m  begin transaction
+Binary data inserted for `string` type on column `image_content_type`
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "pins" ("created_at", "description", "image_content_type", "image_file_name", "image_file_size", "image_updated_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 17 Dec 2013 05:42:50 UTC +00:00], ["description", "Water Fall Fossil Creek"], ["image_content_type", "image/jpeg"], ["image_file_name", "Misc_114.JPG"], ["image_file_size", 2150549], ["image_updated_at", Tue, 17 Dec 2013 05:42:47 UTC +00:00], ["updated_at", Tue, 17 Dec 2013 05:42:50 UTC +00:00], ["user_id", 1]]
+  [1m[35m (6.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/pins/13
+Completed 302 Found in 2599ms (ActiveRecord: 10.0ms)
+
+
+Started GET "/pins/13" for 127.0.0.1 at 2013-12-16 22:42:50 -0700
+Processing by PinsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mPin Load (1.0ms)[0m  [1mSELECT "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT 1[0m  [["id", "13"]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered pins/show.html.erb within layouts/application (5.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 44ms (Views: 41.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-16 22:42:50 -0700
+
+
+Started GET "/pins" for 127.0.0.1 at 2013-12-16 22:42:59 -0700
+Processing by PinsController#index as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPin Load (0.0ms)[0m  [1mSELECT "pins".* FROM "pins"[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered pins/index.html.erb within layouts/application (14.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+Completed 200 OK in 39ms (Views: 37.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/pins/13" for 127.0.0.1 at 2013-12-16 22:43:03 -0700
+Processing by PinsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[35mPin Load (0.0ms)[0m  SELECT "pins".* FROM "pins" WHERE "pins"."id" = ? LIMIT 1  [["id", "13"]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered pins/show.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 30ms (Views: 28.0ms | ActiveRecord: 0.0ms)
+  [1m[36mPin Load (1.0ms)[0m  [1mSELECT "pins".* FROM "pins" ORDER BY "pins"."id" ASC LIMIT 1[0m
+
+
+Started GET "/pins" for 127.0.0.1 at 2013-12-16 23:01:39 -0700
+Processing by PinsController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPin Load (1.0ms)[0m  SELECT "pins".* FROM "pins"
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered pins/index.html.erb within layouts/application (14.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 51ms (Views: 49.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-16 23:01:39 -0700
+
+
+Started GET "/pins" for 127.0.0.1 at 2013-12-16 23:03:42 -0700
+Processing by PinsController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPin Load (0.0ms)[0m  SELECT "pins".* FROM "pins"
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered pins/index.html.erb within layouts/application (13.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 54ms (Views: 54.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-16 23:03:42 -0700
+
+
+Started GET "/pins" for 127.0.0.1 at 2013-12-16 23:13:50 -0700
+Processing by PinsController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPin Load (0.0ms)[0m  SELECT "pins".* FROM "pins"
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered pins/index.html.erb within layouts/application (12.0ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+Completed 200 OK in 39ms (Views: 39.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-16 23:13:50 -0700
+
+
+Started GET "/pins" for 127.0.0.1 at 2013-12-16 23:15:14 -0700
+Processing by PinsController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPin Load (0.0ms)[0m  SELECT "pins".* FROM "pins"
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered pins/index.html.erb within layouts/application (29.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 54ms (Views: 52.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-16 23:15:14 -0700
+
+
+Started GET "/pins" for 127.0.0.1 at 2013-12-16 23:23:07 -0700
+Processing by PinsController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPin Load (38.0ms)[0m  SELECT "pins".* FROM "pins" ORDER BY created_at DESC
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered pins/index.html.erb within layouts/application (106.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 151ms (Views: 104.0ms | ActiveRecord: 42.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-16 23:23:07 -0700
