@@ -8,7 +8,9 @@
         <%= pin.description %><br/>
 
         <% if user_signed_in? %>
-        <strong> Posted by <%= link_to pin.user.name %></strong>
+        <strong>
+         Posted by <%= link_to pin.user.name, pin.user %>
+        </strong>
         <% end %>
 
 
