@@ -8,10 +8,9 @@
       </div>
       <div class="panel-body">
         <p><%= @pin.description %></p>
-        
+                
         <% if @pin.user == current_user %>
          <%= link_to 'Edit', edit_pin_path(@pin) %>
-         <p><strong><%= @pin.user.name if @pin.user %></strong></p>
         <style>
     body {
         padding-top: 75px;
