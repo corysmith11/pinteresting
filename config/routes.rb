@@ -1,12 +1,14 @@
 Pinteresting::Application.routes.draw do
   get "user/show"
   resources :pins
+  
 
   devise_for :users
+  resources :users
   root "pins#index"
   get "about" => "pages#about"
   get "started" => "pages#started"
-  get 'users/:id' => 'users#show', as: :user
+  get 'users/:id' => 'users#show'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
